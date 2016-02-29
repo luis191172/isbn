@@ -27,26 +27,27 @@
                                 <rect key="frame" x="241" y="91" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
+                                <connections>
+                                    <action selector="isbnTecleado:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ieG-Rp-aAi"/>
+                                    <action selector="isbnTecleado:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="w7K-AA-0XB"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbP-AQ-Uhz">
-                                <rect key="frame" x="240" y="152" width="48" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cy4-5s-0U5">
+                                <rect key="frame" x="222" y="152" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
-                                    <action selector="searchISBN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wwc-vF-Qew"/>
+                                    <action selector="searchIsbn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YGc-cq-LMo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laq-fU-1fr">
-                                <rect key="frame" x="302" y="152" width="36" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6o-3O-pjn">
+                                <rect key="frame" x="327" y="152" width="36" height="30"/>
                                 <state key="normal" title="Clear"/>
-                                <connections>
-                                    <action selector="clearISBN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgo-vb-VUd"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="isbnIntroducido" destination="Gy6-yr-dGI" id="AtL-ew-gzx"/>
+                        <outlet property="isbnIntroducido" destination="Gy6-yr-dGI" id="jHD-p3-KY4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

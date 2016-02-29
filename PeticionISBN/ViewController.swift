@@ -22,34 +22,24 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func searchISBN(sender: AnyObject) {
+    
+    @IBAction func searchIsbn(sender: AnyObject) {
         
-        let urls1:String = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
-        let urls2 = self.isbnIntroducido.text!
-        
-        let urls = urls1+urls2
-        
-       // print(urls2)
-       // print(urls)
-        
-        
+        let urlsCuerpo = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
+        let urlsIsbnIntroducido = self.isbnIntroducido.text!
+        let urls = urlsCuerpo+urlsIsbnIntroducido
         
         let url = NSURL(string: urls)
-        let sesion = NSURLSession.sharedSession()
-        let bloque = { (datos: NSData?, resp:NSURLResponse?, error: NSError?) -> Void in let texto = NSString(data: datos!, encoding: NSUTF8StringEncoding)
-            print(texto!)
-        }
-        
-        let dt = sesion.dataTaskWithURL(url!, completionHandler: bloque)
-       dt.resume()
-        
-        
-        
+        let datos:NSData? = NSData(contentsOfURL: url!)
+        let texto = NSString(data:datos!, encoding:NSUTF8StringEncoding)
+        print(texto!)
         
     }
-    func clearISBN(sender: AnyObject) {
+    
         
-    }
+        
+
+    
+
 }
 
